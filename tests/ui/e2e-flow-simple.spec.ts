@@ -88,7 +88,7 @@ test('TL-18-4 Tracking an order by correct tracking code', async ({ page }) => {
   await statusModal.orderSearchButton.click()
 })
 
-test.only('TL-18-5 Check elements on status page', async ({ page }) => {
+test('TL-18-5 Check elements on status page', async ({ page }) => {
   const loginPage = new LoginPage(page)
   await loginPage.open()
   const orderPage = await loginPage.signIn(USERNAME, PASSWORD)
