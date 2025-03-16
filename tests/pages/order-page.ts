@@ -10,6 +10,7 @@ export class OrderPage extends BasePage {
   readonly statusModal: Locator
   readonly orderNumberField: Input
   readonly trackButton: Button
+  readonly createOrderButton: Button
 
   constructor(page: Page) {
     super(page)
@@ -19,6 +20,7 @@ export class OrderPage extends BasePage {
     this.commentField = new Input(page, '#comment')
     this.statusModal = page.getByTestId('searchOrder-popup')
     this.orderNumberField = new Input(page, '[data-name="searchOrder-popup"] input')
-    this.trackButton = new Button(page, '[data-name="searchOrder-submitButton"]')
+    this.trackButton = new Button(page, '[data-name="createOrder-button"]')
+    this.createOrderButton = new Button(page, '[data-name="searchOrder-submitButton"]')
   }
 }
