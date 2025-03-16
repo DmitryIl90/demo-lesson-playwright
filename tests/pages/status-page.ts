@@ -33,20 +33,36 @@ export class StatusPage extends BasePage {
   constructor(page: Page) {
     super(page)
     this.uselessInput = new Input(page, '[data-name="useless-input"]')
-    this.orderNameTItle = this.page.locator('.order-list__title', {hasText: /Name/})
-    this.orderPhoneTitle = this.page.locator('.order-list__title', {hasText: /Phone/})
-    this.orderCommentTitle = this.page.locator('.order-list__title', {hasText: /Comment/})
-    this.orderStatusOpen = this.page.locator('span.status-list__status', { hasText: /OPEN/})
-    this.orderStatusAccepted = this.page.locator('span.status-list__status', { hasText: /ACCEPTED/})
-    this.orderStatusInprogress = this.page.locator('span.status-list__status', { hasText: /INPROGRESS/})
-    this.orderStatusDelivered = this.page.locator('span.status-list__status', { hasText: /DELIVERED/})
-    this.orderStatusOpenDescription = this.page.locator('.status-list__description', { hasText: /Order has been created/})
-    this.orderStatusAcceptedDescription = this.page.locator('.status-list__description', { hasText: /Order picked up by courier/})
-    this.orderStatusInprogressDescription = this.page.locator('.status-list__description', { hasText: /Order is being delivered/})
-    this.orderStatusDeliveredDescription = this.page.locator('.status-list__description', { hasText: /Order has been delivered/})
-    this.orderNameDescription = this.page.locator('.order-list__description', {hasText: /123123/})
-    this.orderPhoneDescription = this.page.locator('.order-list__description', {hasText: /000000/})
-    this.orderCommentDescription = this.page.locator('.order-list__description', {hasText: /111/})
+    this.orderNameTItle = this.page.locator('.order-list__title', { hasText: /Name/ })
+    this.orderPhoneTitle = this.page.locator('.order-list__title', { hasText: /Phone/ })
+    this.orderCommentTitle = this.page.locator('.order-list__title', { hasText: /Comment/ })
+    this.orderStatusOpen = this.page.locator('span.status-list__status', { hasText: /OPEN/ })
+    this.orderStatusAccepted = this.page.locator('span.status-list__status', {
+      hasText: /ACCEPTED/,
+    })
+    this.orderStatusInprogress = this.page.locator('span.status-list__status', {
+      hasText: /INPROGRESS/,
+    })
+    this.orderStatusDelivered = this.page.locator('span.status-list__status', {
+      hasText: /DELIVERED/,
+    })
+    this.orderStatusOpenDescription = this.page.locator('.status-list__description', {
+      hasText: /Order has been created/,
+    })
+    this.orderStatusAcceptedDescription = this.page.locator('.status-list__description', {
+      hasText: /Order picked up by courier/,
+    })
+    this.orderStatusInprogressDescription = this.page.locator('.status-list__description', {
+      hasText: /Order is being delivered/,
+    })
+    this.orderStatusDeliveredDescription = this.page.locator('.status-list__description', {
+      hasText: /Order has been delivered/,
+    })
+    this.orderNameDescription = this.page.locator('.order-list__description', { hasText: /123123/ })
+    this.orderPhoneDescription = this.page.locator('.order-list__description', {
+      hasText: /000000/,
+    })
+    this.orderCommentDescription = this.page.locator('.order-list__description', { hasText: /111/ })
   }
 
   async checkOrderStatusText(): Promise<void> {

@@ -1,15 +1,15 @@
 import { Locator, Page } from '@playwright/test'
-import { Input} from '../atoms/Input'
+import { Input } from '../atoms/Input'
 import { Button } from '../atoms/Button'
 import { BasePage } from './base-page'
 
 export class OrderPage extends BasePage {
-  readonly nameField: Input;
-  readonly phoneField: Input;
-  readonly commentField: Input;
-  readonly statusModal: Locator;
-  readonly orderNumberField: Input;
-  readonly trackButton: Button;
+  readonly nameField: Input
+  readonly phoneField: Input
+  readonly commentField: Input
+  readonly statusModal: Locator
+  readonly orderNumberField: Input
+  readonly trackButton: Button
 
   constructor(page: Page) {
     super(page)

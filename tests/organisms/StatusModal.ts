@@ -3,7 +3,6 @@ import { expect, Locator, Page } from '@playwright/test'
 import { Input } from '../atoms/Input'
 import { Button } from '../atoms/Button'
 
-
 export class StatusModal extends BaseModal {
   orderSearchInput: Input
   orderSearchButton: Button

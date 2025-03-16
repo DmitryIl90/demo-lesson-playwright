@@ -2,24 +2,22 @@ import { expect, Locator, Page } from '@playwright/test'
 import { Button } from '../atoms/Button'
 import { Link } from '../atoms/Link'
 
-
 export class BasePage {
-  readonly page: Page;
-  readonly footer: Locator;
-  readonly langButtonRu: Button;
-  readonly langButtonEn: Button;
-  readonly privacyPolicyLink: Link;
-  readonly cookiePolicyLink: Link;
-  readonly tosLink: Link;
+  readonly page: Page
+  readonly footer: Locator
+  readonly langButtonRu: Button
+  readonly langButtonEn: Button
+  readonly privacyPolicyLink: Link
+  readonly cookiePolicyLink: Link
+  readonly tosLink: Link
   readonly title: Locator
   readonly logo: Locator
   readonly logoText: Locator
   readonly statusButton: Button
   readonly logOutButton: Button
 
-
   protected constructor(page: Page) {
-    this.page = page;
+    this.page = page
     this.footer = this.page.locator('.Footer')
     this.langButtonRu = new Button(this.page, '.language__button:has-text("RU")')
     this.langButtonEn = new Button(this.page, '.language__button:has-text("EN")')
@@ -28,13 +26,15 @@ export class BasePage {
     this.tosLink = new Link(this.page, '[href="/pdf/conditions.pdf"]')
     this.title = this.page.locator('.title')
     this.logo = this.page.locator('[href="/"]')
-    this.logoText = this.page.locator('.logo_main__text.logo_main__text_shown', {hasText: 'Trainer'})
+    this.logoText = this.page.locator('.logo_main__text.logo_main__text_shown', {
+      hasText: 'Trainer',
+    })
     this.statusButton = new Button(page, '[data-name="openStatusPopup-button"]')
     this.logOutButton = new Button(page, '[href="/signin"]')
   }
 
   async checkFooterAttached(): Promise<void> {
-    await expect(this.footer).toBeAttached();
+    await expect(this.footer).toBeAttached()
   }
 
   async checkTitle(): Promise<void> {

@@ -1,7 +1,6 @@
 import { Page } from '@playwright/test'
 import { Button } from '../atoms/Button'
 
-
 export class BaseModal {
   readonly page: Page
   readonly closeButton: Button

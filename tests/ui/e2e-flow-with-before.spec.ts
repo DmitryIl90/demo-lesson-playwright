@@ -13,8 +13,8 @@ test.beforeEach(async ({ page }) => {
 test('signIn button disabled when incorrect data inserted', async ({}) => {
   await authPage.usernameField.fill(faker.lorem.word(2))
   await authPage.passwordField.fill(faker.lorem.word(7))
-  await authPage.signInButton.checkVisible();
-  await authPage.signInButton.checkDisabled(true);
+  await authPage.signInButton.checkVisible()
+  await authPage.signInButton.checkDisabled(true)
 })
 
 test('error message displayed when incorrect credentials used', async ({}) => {
@@ -23,7 +23,7 @@ test('error message displayed when incorrect credentials used', async ({}) => {
 
 test('login with correct credentials and verify order creation page', async ({}) => {
   const orderCreationPage = await authPage.signIn(USERNAME, PASSWORD)
-  await orderCreationPage.statusButton.checkVisible();
+  await orderCreationPage.statusButton.checkVisible()
   // verify at least few elements on the order creation page
 })
 
